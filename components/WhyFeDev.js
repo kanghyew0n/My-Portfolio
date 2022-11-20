@@ -1,12 +1,9 @@
 import styled from "styled-components";
-import useScroll from "../hooks/useScroll";
 import { REASON } from "../constant.js";
 import ReasonCard from "./ui/ReasonCard";
 import { BREAK_POINT_DESKTOP, BREAK_POINT_TABLET, BREAK_POINT_PHONE } from "../constant";
 
 const WhyFeDev = () => {
-    const { scrollY } = useScroll();
-    console.log(scrollY);
     return (
         <Container>
             <h2>&nbsp;&nbsp;💻 &nbsp;Why FrontEnd Developer ?</h2>
@@ -24,6 +21,7 @@ const Container = styled.div`
     h2 {
         margin-bottom: 48px;
         font-size: 32px;
+        text-align: center;
     }
 
     @media only screen and (max-width: ${BREAK_POINT_TABLET}px) {
@@ -38,7 +36,6 @@ const Container = styled.div`
         h2 {
             margin-bottom: 24px;
             font-size: 20px;
-            text-align: center;
         }
     }
 

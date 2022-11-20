@@ -1,17 +1,20 @@
 import styled from "styled-components";
-import { BREAK_POINT_TABLET, BREAK_POINT_PHONE } from "../constant";
+import Link from "next/link";
+import { BREAK_POINT_TABLET } from "../constant";
 
-const Header = () => {
+const Header = ({ onItsMeClick }) => {
     return (
         <HeaderContainer>
             <div className="innerContainer">
-                <Logo>
-                    <div className="logo"></div>
-                    <div className="logo2"></div>
-                </Logo>
+                <Link href="/">
+                    <Logo>
+                        <div className="logo"></div>
+                        <div className="logo2"></div>
+                    </Logo>
+                </Link>
 
                 <HeaderItems>
-                    <li>It's Me</li>
+                    <li onClick={onItsMeClick}>It's Me !</li>
                     <li>Project</li>
                     <li>Contact</li>
                 </HeaderItems>
@@ -64,6 +67,7 @@ const HeaderContainer = styled.div`
 
 const Logo = styled.div`
     display: flex;
+    cursor: pointer;
 `;
 
 const HeaderItems = styled.ul`
@@ -74,6 +78,7 @@ const HeaderItems = styled.ul`
     li {
         font-size: 20px;
         font-weight: 300;
+        cursor: pointer;
     }
 
     @media only screen and (max-width: ${BREAK_POINT_TABLET}px) {

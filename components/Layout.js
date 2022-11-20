@@ -1,12 +1,12 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import styled from "styled-components";
-import { BREAK_POINT_DESKTOP, BREAK_POINT_TABLET } from "../constant";
+import { BREAK_POINT_TABLET } from "../constant";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, onItsMeClick }) => {
     return (
         <>
-            <Header />
+            <Header onItsMeClick={onItsMeClick} />
             <Container>{children}</Container>
             <Footer />
         </>
