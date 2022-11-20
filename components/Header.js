@@ -1,13 +1,17 @@
 import styled from "styled-components";
+import { BREAK_POINT_TABLET, BREAK_POINT_PHONE } from "../constant";
 
 const Header = () => {
     return (
         <HeaderContainer>
             <div className="innerContainer">
-                <div className="logo"></div>
-                <div className="logo2"></div>
+                <Logo>
+                    <div className="logo"></div>
+                    <div className="logo2"></div>
+                </Logo>
+
                 <HeaderItems>
-                    <li>Who am I</li>
+                    <li>It's Me</li>
                     <li>Project</li>
                     <li>Contact</li>
                 </HeaderItems>
@@ -24,10 +28,10 @@ const HeaderContainer = styled.div`
     z-index: 200;
 
     .innerContainer {
-        padding: 0 4rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0 4rem;
 
         .logo,
         .logo2 {
@@ -42,20 +46,42 @@ const HeaderContainer = styled.div`
             border: 1px solid #eee;
         }
     }
+
+    @media only screen and (max-width: ${BREAK_POINT_TABLET}px) {
+        height: 60px;
+
+        .innerContainer {
+            padding: 0 1rem;
+
+            .logo,
+            .logo2 {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+`;
+
+const Logo = styled.div`
+    display: flex;
 `;
 
 const HeaderItems = styled.ul`
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: end;
     gap: 48px;
     height: 80px;
-
     li {
-        position: relative;
         font-size: 20px;
         font-weight: 300;
+    }
+
+    @media only screen and (max-width: ${BREAK_POINT_TABLET}px) {
+        height: 60px;
+        li {
+            gap: 32px;
+            font-size: 18px;
+        }
     }
 `;
 export default Header;

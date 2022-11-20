@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BREAK_POINT_DESKTOP, BREAK_POINT_TABLET, BREAK_POINT_PHONE } from "../../constant";
 
 const InfoCard = (props) => {
     return (
@@ -14,7 +15,8 @@ const InfoCard = (props) => {
 const InfoCardContainer = styled.div`
     width: calc((100% - 64px) / 3);
     height: 100%;
-    padding: 40px 40px 60px 50px;
+    /* padding: 40px 40px 60px 50px; */
+    padding: 3vw 3vw 4vw 3vw;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 30px;
     color: #eee;
@@ -47,7 +49,6 @@ const InfoCardContainer = styled.div`
 
     p {
         line-height: 160%;
-       
     }
 
     &:hover {
@@ -57,6 +58,38 @@ const InfoCardContainer = styled.div`
         }
         overflow-x: hidden;
     }
+
+    @media only screen and (max-width: ${BREAK_POINT_DESKTOP}px) {
+        width: 100%;
+        padding: 40px 40px 60px 50px;
+
+        .keyword {
+            font-size: 20px;
+        }
+
+        .sunTitle {
+            font-size: 16px;
+        }
+
+        .content {
+            font-size: 16px;
+        }
+
+        &:hover {
+            transform: translateY(0);
+        }
+    }
+    @media only screen and (max-width: ${BREAK_POINT_TABLET}px) {
+        padding: 35px 35px 40px 35px;
+        .icon {
+            font-size: 36px;
+        }
+    }
+
+    @media only screen and (max-width: ${BREAK_POINT_PHONE}px) {
+        padding: 25px 25px 30px 25px;
+    }
+
 `;
 
 export default InfoCard;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BREAK_POINT_DESKTOP, BREAK_POINT_TABLET, BREAK_POINT_PHONE } from "../../constant";
 
 const ReasonCard = (props) => {
     return (
@@ -71,6 +72,28 @@ const ReasonCardContainer = styled.div`
             background-size: 100% 100%;
         }
     }
+
+    @media only screen and (max-width: ${BREAK_POINT_DESKTOP}px) {
+        width: 100%;
+        padding: 40px 40px 60px 50px;
+
+        .title {
+            font-size: 16px;
+        }
+
+        .content,
+        .highlight {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (max-width: ${BREAK_POINT_TABLET}px) {
+        padding: 35px 35px 40px 35px;
+    }
+    @media only screen and (max-width: ${BREAK_POINT_PHONE}px) {
+        padding: 25px 25px 30px 25px;
+    }
+
 `;
 
 export default ReasonCard;

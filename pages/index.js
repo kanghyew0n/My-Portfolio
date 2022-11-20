@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import useScroll from "../hooks/useScroll";
 import styled from "styled-components";
-import WhoAmI from "../components/WhoAmI";
+import ItsMe from "../components/ItsMe";
 import MainText from "../components/MainText";
 import Header from "../components/Header";
 import WhyFeDev from "../components/WhyFeDev";
@@ -11,7 +11,7 @@ export default function Home() {
         <Container>
             <Layout>
                 <MainText />
-                <WhoAmI />
+                <ItsMe />
                 <WhyFeDev />
             </Layout>
         </Container>
