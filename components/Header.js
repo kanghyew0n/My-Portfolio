@@ -1,8 +1,23 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { BREAK_POINT_TABLET } from "../constant";
+import { useRouter } from "next/router";
 
 const Header = ({ onItsMeClick }) => {
+    const router = useRouter();
+
+    const ItsMe = () => {
+
+        if (router.pathname === "/") {
+            return <li onClick={onItsMeClick}>It's Me !</li>;
+        } else {
+            return (
+                <Link href="/">
+                    <li>It's Me !</li>
+                </Link>
+            );
+        }
+    };
     return (
         <HeaderContainer>
             <div className="innerContainer">
@@ -14,8 +29,10 @@ const Header = ({ onItsMeClick }) => {
                 </Link>
 
                 <HeaderItems>
-                    <li onClick={onItsMeClick}>It's Me !</li>
-                    <li>Project</li>
+                    <ItsMe />
+                    <Link href="/project">
+                        <li>Project</li>
+                    </Link>
                     <li>Contact</li>
                 </HeaderItems>
             </div>

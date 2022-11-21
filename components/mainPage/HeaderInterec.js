@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import useScroll from "../hooks/useScroll";
+import useScroll from "../../hooks/useScroll";
 import Image from "next/image";
 
 const Header = () => {

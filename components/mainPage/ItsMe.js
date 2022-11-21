@@ -1,12 +1,12 @@
 import { forwardRef } from "react";
 import styled from "styled-components";
-import InfoCard from "./ui/InfoCard";
-import { INFO } from "../constant.js";
+import InfoCard from "../mainPage/InfoCard";
+import { INFO } from "../../constant";
 import {
     BREAK_POINT_DESKTOP,
     BREAK_POINT_TABLET,
     BREAK_POINT_PHONE,
-} from "../constant";
+} from "../../constant";
 
 const POINTER = forwardRef((props, ref) => {
     return (

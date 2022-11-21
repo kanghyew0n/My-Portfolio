@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { REASON } from "../constant.js";
-import ReasonCard from "./ui/ReasonCard";
-import { BREAK_POINT_DESKTOP, BREAK_POINT_TABLET, BREAK_POINT_PHONE } from "../constant";
+import { REASON } from "../../constant.js";
+import ReasonCard from "../mainPage/ReasonCard";
+import { BREAK_POINT_DESKTOP, BREAK_POINT_TABLET, BREAK_POINT_PHONE } from "../../constant";
 
 const WhyFeDev = () => {
     return (

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { BREAK_POINT_TABLET, BREAK_POINT_DESKTOP, BREAK_POINT_PHONE } from "../constant";
+import { BREAK_POINT_TABLET, BREAK_POINT_DESKTOP, BREAK_POINT_PHONE } from "../../constant";
 
 const MainText = () => {
     const [click, setClick] = useState(false);
@@ -29,7 +29,7 @@ const MainText = () => {
 };
 
 const MainTextContainer = styled.div`
-    padding-top: 255px;
+    padding-top: 135px;
     margin: 0 auto;
     width: 100%;
 
@@ -45,10 +45,10 @@ const MainTextContainer = styled.div`
     }
 
     @media only screen and (max-width: ${BREAK_POINT_DESKTOP}px) {
-        padding-top: 220px;
+        padding-top: 125px;
     }
     @media only screen and (max-width: ${BREAK_POINT_TABLET}px) {
-        padding-top: 200px;
+        padding-top: 130px;
     }
 `;
 

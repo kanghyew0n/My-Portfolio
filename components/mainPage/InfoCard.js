@@ -15,7 +15,6 @@ const InfoCard = (props) => {
 const InfoCardContainer = styled.div`
     width: calc((100% - 64px) / 3);
     height: 100%;
-    /* padding: 40px 40px 60px 50px; */
     padding: 3vw 3vw 4vw 3vw;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 30px;

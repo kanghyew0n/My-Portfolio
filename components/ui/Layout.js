@@ -1,7 +1,7 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../Header";
+import Footer from "../Footer";
 import styled from "styled-components";
-import { BREAK_POINT_TABLET } from "../constant";
+import { BREAK_POINT_TABLET } from "../../constant";
 
 const Layout = ({ children, onItsMeClick }) => {
     return (
@@ -14,9 +14,10 @@ const Layout = ({ children, onItsMeClick }) => {
 };
 
 const Container = styled.div`
-    padding: 0 4rem;
+    padding: 80px 4rem 0 4rem;
+    min-height: calc(100vh - 360px);
     @media only screen and (max-width: ${BREAK_POINT_TABLET}px) {
-        padding: 0 1rem;
+        padding: 60px 1rem 0 1rem;
     }
 `;
 
