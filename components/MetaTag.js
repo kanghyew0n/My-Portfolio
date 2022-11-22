@@ -11,7 +11,7 @@ const MetaTag = () => {
             <meta
                 name="keywords"
                 content="프론트앤드, 개발자, 포트폴리오, 포트폴리오 사이트"
-            />
+            ></meta>
             <meta name="author" content="강혜원" />
             <title> 강혜원 : 프론트앤드 개발자 포트폴리오 </title>
             <link rel="icon" href="/favicon.ico" />
