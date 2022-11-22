@@ -2,10 +2,12 @@ import Header from "../Header";
 import Footer from "../Footer";
 import styled from "styled-components";
 import { BREAK_POINT_TABLET } from "../../constant";
+import MetaTag from "../metaTag";
 
 const Layout = ({ children, onItsMeClick }) => {
     return (
         <>
+            <MetaTag />
             <Header onItsMeClick={onItsMeClick} />
             <Container>{children}</Container>
             <Footer />
