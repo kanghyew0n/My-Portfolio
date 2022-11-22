@@ -2,7 +2,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import styled from "styled-components";
 import { BREAK_POINT_TABLET } from "../../constant";
-import MetaTag from "../metaTag";
+import MetaTag from "../MetaTag";
 
 const Layout = ({ children, onItsMeClick }) => {
     return (
