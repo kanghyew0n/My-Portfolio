@@ -48,8 +48,11 @@ export const REASON = [
 
 export const PROJECT = [
     {
+        projectImage: "/assets/projectImages/project1.png",
+        hoverProjectImage : "/assets/projectImages/seoulInPetkage.png",
         projectName: "Seoul in petkage : 서울인펫키지",
         description: "서울시 반려동반 장소 공유 서비스",
+        team: "Team",
         date: "2022/09/15 ~ 현재",
         detailDescription:
             "코드스테이츠를 수료하며 진행했던 프로젝트입니다. 서울인펫키지는 반려견을 키우고 있는 팀원들의 의견을 반영하여 제작을 시작하게 되었고, 사용자들의 장소 등록을 기반으로 운영되는 서비스로 기획했습니다.",
@@ -58,28 +61,30 @@ export const PROJECT = [
         serviceURL: "kanghyew0n/TeamSafari",
         serviceURLLink: "https://github.com/codestates-seb/seb39_main_048",
         feStack: [
-            "JavaScript",
-            "Vite",
-            "StyledComponent",
-            "React",
-            "SWR",
-            "Cloudinary",
-            "zustand",
+            "JavaScript,",
+            "Vite,",
+            "StyledComponent,",
+            "React,",
+            "SWR,",
+            "Cloudinary,",
+            "zustand,",
         ],
         beStack: [
-            "JavaScript",
-            "StyledComponent",
-            "Vite",
-            "React",
-            "SWR",
-            "Cloudinary",
-            "zustand",
+            "Java,",
+            "spring,",
+            "boot,",
+            "spring,",
+            "data,",
+            "jpa,",
+            "springsecurity",
         ],
     },
 
     {
+        projectImage: "/assets/projectImages/seoulInPetkage.png",
         projectName: "Project.zip",
         description: "그동안 작업해온 자잘한 작업 모음집",
+        team: "Personal",
         date: "2022/09/15 ~ 현재",
         detailDescription:
             "학습하며 제작했던 여러가지 Toy-Project를 모아놓은 사이트입니다. 메인 기술 스택 단위로 구분되어있고 간단한 설명이 포함되어있습니다. 학습한 프로젝트를 한 눈에 보기 위해 제작하게 되었습니다.",
@@ -99,8 +104,10 @@ export const PROJECT = [
     },
 
     {
+        projectImage: "/assets/projectImages/seoulInPetkage.png",
         projectName: "Kanghyew0n Portfolio",
         description: "포트폴리오 사이트",
+        team: "Personal",
         date: "2022/09/15 ~ 현재",
         detailDescription:
             "학습하며 제작했던 여러가지 Toy-Project를 모아놓은 사이트입니다. 메인 기술 스택 단위로 구분되어있고 간단한 설명이 포함되어있습니다. 학습한 프로젝트를 한 눈에 보기 위해 제작하게 되었습니다.",

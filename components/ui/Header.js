@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { BREAK_POINT_TABLET } from "../constant";
+import { BREAK_POINT_TABLET } from "../../constant";
 import { useRouter } from "next/router";
 
 const Header = ({ onItsMeClick }) => {

@@ -5,47 +5,62 @@ import {
     BREAK_POINT_TABLET,
     BREAK_POINT_PHONE,
 } from "../../constant";
+import Tag from "../ui/Tag";
 
 const ProjectCard = ({ project }) => {
     return (
         <Container>
-            <div className="image"></div>
+            <div className="ProjectImageBox">
+                <Image
+                    src={project.projectImage}
+                    width={500}
+                    height={500}
+                    className="projectDemo"
+                    alt="서울인펫키지 이미지"
+                />
+                <Image
+                    src={project.hoverProjectImage}
+                    width={500}
+                    height={500}
+                    className="hoverImage"
+                    alt="서울인펫키지 이미지"
+                />
+            </div>
             <ProjectInfo>
                 <TitleNbutton>
                     <div className="titleGroup">
                         <div className="Maintitle">{project.projectName}</div>
-                        <div className="description">{project.description}</div>
+
+                        <div className="withTag">
+                            <div className="description">
+                                {project.description}
+                            </div>
+                            <Tag text={project.team} />
+                        </div>
                     </div>
-                    <Image
-                        src="/assets/moveBtn.svg"
-                        width={32}
-                        height={32}
-                        className="projectImg"
-                    />
+                    <div
+                        className="imageBox"
+                        onClick={() => window.open(`${project.githubLink}`)}
+                    >
+                        <Image
+                            src="/assets/github.svg"
+                            width={32}
+                            height={32}
+                            className="projectImg"
+                            alt="깃허브 이미지"
+                        />
+                    </div>
                 </TitleNbutton>
                 <div className="date">{project.date}</div>
                 <p className="detailDescription">{project.detailDescription}</p>
                 <StackContainer>
                     <div className="stackGroup">
-                        <span className="groupTitle">🔗 Github</span>
-                        <a href={project.githubLink} className="groupItem link">
-                            {project.github}
-                        </a>
-                    </div>
-                    <div className="stackGroup border">
-                        <span className="groupTitle">🔗 URL</span>
-                        <a
-                            href={project.serviceURLLink}
-                            className="groupItem link"
-                        >
-                            {project.serviceURL}
-                        </a>
-                    </div>
-                    <div className="stackGroup">
                         <span className="groupTitle">📚 Front Stack</span>
                         <span className="groupItem">
-                            {project.feStack.map((stack) => (
-                                <span className="stackTag">{stack},</span>
+                            {project.feStack.map((stack, idx) => (
+                                <span className="stackTag" key={idx}>
+                                    {stack}
+                                </span>
                             ))}
                         </span>
                     </div>
@@ -53,8 +68,10 @@ const ProjectCard = ({ project }) => {
                         <div className="stackGroup">
                             <span className="groupTitle">📚 Back Stack</span>
                             <span className="groupItem">
-                                {project.beStack.map((stack) => (
-                                    <span className="stackTag">{stack},</span>
+                                {project.beStack.map((stack, idx) => (
+                                    <span className="stackTag" key={idx}>
+                                        {stack}
+                                    </span>
                                 ))}
                             </span>
                         </div>
@@ -78,16 +95,43 @@ const Container = styled.div`
     background: rgba(255, 255, 255, 0.05);
     border-radius: 30px;
 
-    .image {
+    .ProjectImageBox {
         width: calc((100% - 16px) / 2);
         height: 400px;
         background-color: #eee;
         border-radius: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            .projectDemo {
+                display: none;
+            }
+            .hoverImage {
+                display: block;
+            }
+        }
+    }
+
+    .hoverImage {
+        display: none;
+        object-fit: cover;
+        width: 100%;
+        z-index: -10;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .projectDemo {
+        object-fit: cover;
+        width: 100%;
+        z-index: -100;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
     }
 
     @media only screen and (max-width: ${BREAK_POINT_DESKTOP}px) {
         display: block;
-        .image {
+        .ProjectImageBox {
             width: 100%;
             height: 300px;
             background-color: #eee;
@@ -101,6 +145,9 @@ const Container = styled.div`
 
     @media only screen and (max-width: ${BREAK_POINT_PHONE}px) {
         padding: 10px;
+        .ProjectImageBox {
+            height: 200px;
+        }
     }
 `;
 
@@ -158,6 +205,21 @@ const TitleNbutton = styled.div`
             font-weight: 400;
             font-size: 18px;
         }
+
+        .withTag {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+    }
+
+    .imageBox {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
     }
 
     @media only screen and (max-width: ${BREAK_POINT_DESKTOP}px) {
@@ -173,10 +235,11 @@ const TitleNbutton = styled.div`
     }
 
     @media only screen and (max-width: ${BREAK_POINT_PHONE}px) {
-        .projectImg {
+        .imageBox {
             position: absolute;
             top: 20px;
             right: 20px;
+            z-index: 100;
         }
     }
 `;
@@ -193,13 +256,14 @@ const StackContainer = styled.div`
     }
 
     .stackGroup.border {
-        border-bottom: 1px solid #424242;
-        padding-bottom: 24px;
+        border-top: 1px solid #424242;
+        padding-top: 16px;
     }
 
     .groupTitle {
         width: 30%;
         font-weight: 600;
+        cursor: pointer;
     }
 
     .groupItem {
