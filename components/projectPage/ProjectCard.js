@@ -103,17 +103,13 @@ const Container = styled.div`
         overflow: hidden;
         transition: all 0.3s ease-in-out;
         &:hover {
-            .projectDemo {
-                display: none;
-            }
             .hoverImage {
-                display: block;
+                transform: translateY(-405px);
             }
         }
     }
 
     .hoverImage {
-        display: none;
         object-fit: cover;
         width: 100%;
         z-index: -10;
@@ -136,6 +132,11 @@ const Container = styled.div`
             height: 300px;
             background-color: #eee;
             border-radius: 15px;
+            &:hover {
+                .hoverImage {
+                    transform: translateY(-305px);
+                }
+            }
         }
     }
 
@@ -147,6 +148,11 @@ const Container = styled.div`
         padding: 10px;
         .ProjectImageBox {
             height: 200px;
+            &:hover {
+                .hoverImage {
+                    transform: translateY(-205px);
+                }
+            }
         }
     }
 `;
