@@ -1,12 +1,23 @@
 import styled from "styled-components";
-import { BREAK_POINT_DESKTOP, BREAK_POINT_TABLET, BREAK_POINT_PHONE } from "../../constant";
+import {
+    BREAK_POINT_DESKTOP,
+    BREAK_POINT_TABLET,
+    BREAK_POINT_PHONE,
+} from "../../constant";
 
 const InfoCard = (props) => {
     return (
         <InfoCardContainer>
             <div className="icon">{props.info.icon}</div>
             <p className="keyword">{props.info.keyWord}</p>
-            <p className="sunTitle">{props.info.subTitle}</p>
+            {props.info.link ? (
+                <a target="_blank" href={props.info.link}>
+                    <p className="sunTitle">{props.info.subTitle}</p>
+                </a>
+            ) : (
+                <p className="sunTitle">{props.info.subTitle}</p>
+            )}
+
             <p className="content">{props.info.content}</p>
         </InfoCardContainer>
     );
@@ -58,6 +69,10 @@ const InfoCardContainer = styled.div`
         overflow-x: hidden;
     }
 
+    a {
+        text-decoration: underline;
+    }
+
     @media only screen and (max-width: ${BREAK_POINT_DESKTOP}px) {
         width: 100%;
         padding: 40px 40px 60px 50px;
@@ -88,7 +103,6 @@ const InfoCardContainer = styled.div`
     @media only screen and (max-width: ${BREAK_POINT_PHONE}px) {
         padding: 25px 25px 30px 25px;
     }
-
 `;
 
 export default InfoCard;

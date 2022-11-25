@@ -7,7 +7,6 @@ const Header = ({ onItsMeClick }) => {
     const router = useRouter();
 
     const ItsMe = () => {
-
         if (router.pathname === "/") {
             return <li onClick={onItsMeClick}>It's Me !</li>;
         } else {
@@ -33,7 +32,6 @@ const Header = ({ onItsMeClick }) => {
                     <Link href="/project">
                         <li>Project</li>
                     </Link>
-                    <li>Contact</li>
                 </HeaderItems>
             </div>
         </HeaderContainer>

@@ -1,16 +1,15 @@
 import styled from "styled-components";
-import { useState } from "react";
-import { BREAK_POINT_TABLET, BREAK_POINT_DESKTOP, BREAK_POINT_PHONE } from "../../constant";
+import {
+    BREAK_POINT_TABLET,
+    BREAK_POINT_DESKTOP,
+    BREAK_POINT_PHONE,
+} from "../../constant";
 
 const MainText = () => {
-    const [click, setClick] = useState(false);
-
     return (
-        <MainTextContainer opacity={click ? "1" : ""}>
+        <MainTextContainer>
             <InnerContainer>
-                <div className="mainText" onClick={() => setClick(!click)}>
-                    Kanghyew0n
-                </div>
+                <div className="mainText">Kanghyew0n</div>
                 <p className="FE">
                     💻 <span>Frontend Developer</span>
                 </p>
@@ -66,6 +65,7 @@ const InnerContainer = styled.div`
         animation: point 1s 3 alternate;
         transition: none;
         transition: all 0.3s ease-in-out;
+        cursor: pointer;
     }
 
     span {
@@ -114,7 +114,6 @@ const InnerContainer = styled.div`
         }
     }
 
-
     @media only screen and (max-width: ${BREAK_POINT_TABLET}px) {
         span {
             display: none;
@@ -144,9 +143,9 @@ const InnerContainer = styled.div`
     }
 
     @media only screen and (max-width: ${BREAK_POINT_PHONE}px) {
-    p {
-        font-size: 25px;
-    }
+        p {
+            font-size: 25px;
+        }
     }
 `;
 

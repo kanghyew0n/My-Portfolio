@@ -38,16 +38,28 @@ const ProjectCard = ({ project }) => {
                             <Tag text={project.team} />
                         </div>
                     </div>
-                    <div
-                        className="imageBox"
-                        onClick={() => window.open(`${project.githubLink}`)}
-                    >
+                    <div className="imageBox">
+                        {project.serviceURL ? (
+                            <Image
+                                src="/assets/site.svg"
+                                width={32}
+                                height={32}
+                                className="githubImage"
+                                alt="사이트 이미지"
+                                onClick={() =>
+                                    window.open(`${project.serviceURL}`)
+                                }
+                            />
+                        ) : (
+                            ""
+                        )}
                         <Image
                             src="/assets/github.svg"
                             width={32}
                             height={32}
-                            className="projectImg"
+                            className="githubImage"
                             alt="깃허브 이미지"
+                            onClick={() => window.open(`${project.githubLink}`)}
                         />
                     </div>
                 </TitleNbutton>
@@ -98,7 +110,7 @@ const Container = styled.div`
     .ProjectImageBox {
         width: calc((100% - 16px) / 2);
         height: 400px;
-        background-color: #eee;
+        background-color: #151515;
         border-radius: 15px;
         overflow: hidden;
         transition: all 0.3s ease-in-out;
@@ -221,11 +233,16 @@ const TitleNbutton = styled.div`
 
     .imageBox {
         background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
+        border-radius: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 5px;
+        gap: 16px;
+
+        .githubImage {
+            cursor: pointer;
+        }
     }
 
     @media only screen and (max-width: ${BREAK_POINT_DESKTOP}px) {
