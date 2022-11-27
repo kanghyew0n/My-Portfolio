@@ -17,7 +17,7 @@ const MainText = () => {
                     👀 <span>Interection</span>
                 </p>
                 <p className="COMMU">
-                    💬 <span>Communication</span>
+                    🏋️‍♀️ <span>Responsibility</span>
                 </p>
                 <p className="REC">
                     ✏️ <span>Recording</span>
