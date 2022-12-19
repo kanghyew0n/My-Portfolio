@@ -65,7 +65,7 @@ export const PROJECT = [
             "React,",
             "SWR,",
             "Cloudinary,",
-            "zustand,",
+            "zustand",
         ],
         beStack: [
             "Java,",
@@ -86,11 +86,12 @@ export const PROJECT = [
         team: "Personal",
         date: "2022/10/19 ~ 2022/10/31  *사이트 방문 시 서버 로딩시간이 필요합니다!",
         detailDescription:
-            "개인으로 백엔드와 프론트엔드 모두 맡아서 진행한 프로젝트입니다. 백엔드 부분은 강의를 보고 진행하였습니다. 로그인은 파이어베이스를 활용하였고 이미지는 네이버 클라우드를 활용하였습니다.",
+            "개인으로 백엔드와 프론트엔드 모두 맡아서 진행한 프로젝트입니다. 백엔드 부분은 강의를 보고 진행하였습니다. 로그인은 파이어베이스를 활용하였고 이미지는 네이버 클라우드를 활용하였습니다. 최근 TypeScript로 마이그레이션을 진행했습니다.",
         githubLink: "https://github.com/kanghyew0n/Toy-Community",
         serviceURL: "https://toy-community.herokuapp.com/",
         feStack: [
             "JavaScript,",
+            "TypeScript",
             "React,",
             "Emotion,",
             "Redux-Toolkit"
