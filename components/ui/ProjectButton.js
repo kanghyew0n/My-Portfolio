@@ -1,27 +1,14 @@
-import styled from "styled-components";
 import Link from "next/link";
+
 
 const ProjectButton = () => {
     return (
-        <Container>
+        <div className='w-full flex items-center justify-center mt-[100px]'>
             <Link href="/project">
-                <span> Project 보러가기 →</span>
+                <button className=' px-[20px] py-[15px] border border-gray-200 rounded-full'> Project 보러가기 →</button>
             </Link>
-        </Container>
+        </div>
     );
 };
-
-const Container = styled.div`
-    padding-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    span {
-        padding: 15px 20px;
-        border: 1px solid #eee;
-        border-radius: 50px;
-    }
-`;
 
 export default ProjectButton;

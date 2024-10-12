@@ -1,152 +1,47 @@
-import styled from "styled-components";
-import {
-    BREAK_POINT_TABLET,
-    BREAK_POINT_DESKTOP,
-    BREAK_POINT_PHONE,
-} from "../../constant";
+import { INFO } from "../../constant";
 
 const MainText = () => {
     return (
-        <MainTextContainer>
-            <InnerContainer>
-                <div className="mainText">Kanghyew0n</div>
-                <p className="FE">
+        <div className="pt-[135px] mx-auto w-full md:pt-[125px] sm:pt-[130px]">
+            <div className="relative">
+                <div className="text-center font-bold select-none text-[12vw] cursor-default">
+                    Kanghyew0n
+                </div>
+                <div className="fe flex items-center gap-[8px] absolute text-[clamp(0.7rem,2.5vw,1.1rem)] px-[2vw] py-[1vw] bg-gray-200 bg-opacity-10 border-2 border-dashed border-gray-500 rounded-full transition-all duration-300 cursor-pointer animate-point" style={getPositionStyles('fe')}>
                     💻 <span>Frontend Developer</span>
-                </p>
-                <p className="INTEREC">
-                    👀 <span>Interection</span>
-                </p>
-                <p className="COMMU">
-                    🏋️‍♀️ <span>Responsibility</span>
-                </p>
-                <p className="REC">
-                    ✏️ <span>Recording</span>
-                </p>
-            </InnerContainer>
-        </MainTextContainer>
+                </div>
+                {Object.keys(INFO).map((key) => {
+                    const { icon, keyWord } = INFO[key];
+                    return (
+                        <div
+                            className={`${key} flex items-center gap-[8px] absolute text-[clamp(0.7rem,2.5vw,1.1rem)] px-[2vw] py-[1vw] bg-gray-200 bg-opacity-10 border-2 border-dashed border-gray-500 rounded-full transition-all duration-300 cursor-pointer animate-point`}
+                            key={key}
+                            style={getPositionStyles(key)}
+                        >
+                            <span>{icon}</span>
+                            <span>{keyWord}</span>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
     );
 };
 
-const MainTextContainer = styled.div`
-    padding-top: 135px;
-    margin: 0 auto;
-    width: 100%;
-
-    .mainText {
-        font-size: 12vw;
-        cursor: default;
-        text-align: center;
-        font-weight: 700;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+// 각 키에 따른 위치 스타일 설정
+const getPositionStyles = (key) => {
+    switch (key) {
+        case "fe":
+            return { top: "-80px", left: "19vw" };
+        case "problemSolver":
+            return { top: "20vw", left: "13vw" };
+        case "processImprover":
+            return { top: "19vw", right: "21vw" };
+        case "effectiveCommunicator":
+            return { top: "-60px", right: "15vw" };
+        default:
+            return {};
     }
-
-    @media only screen and (max-width: ${BREAK_POINT_DESKTOP}px) {
-        padding-top: 125px;
-    }
-    @media only screen and (max-width: ${BREAK_POINT_TABLET}px) {
-        padding-top: 130px;
-    }
-`;
-
-const InnerContainer = styled.div`
-    position: relative;
-
-    p {
-        position: absolute;
-        font-size: clamp(0.7rem, 2.5vw, 1.1rem);
-        top: 0;
-        padding: 1vw 1.5vw;
-        background: rgba(238, 238, 238, 0.1);
-        border: 2px dashed rgba(238, 238, 238, 0.5);
-        border-radius: 50px;
-        animation: point 1s 3 alternate;
-        transition: none;
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
-    }
-
-    span {
-        margin-left: 5px;
-    }
-
-    .FE {
-        top: -80px;
-        left: 19vw;
-    }
-    .INTEREC {
-        top: 20vw;
-        left: 13vw;
-    }
-    .COMMU {
-        top: 19vw;
-        right: 21vw;
-    }
-    .REC {
-        top: -60px;
-        right: 15vw;
-    }
-
-    @keyframes point {
-        50% {
-            opacity: 0.2;
-        }
-    }
-
-    @media only screen and (max-width: ${BREAK_POINT_DESKTOP}px) {
-        .FE {
-            top: -60px;
-            left: 12vw;
-        }
-        .INTEREC {
-            top: 20vw;
-            left: 13vw;
-        }
-        .COMMU {
-            top: 21vw;
-            right: 15vw;
-        }
-        .REC {
-            top: -60px;
-            right: 12vw;
-        }
-    }
-
-    @media only screen and (max-width: ${BREAK_POINT_TABLET}px) {
-        span {
-            display: none;
-        }
-        p {
-            font-size: 30px;
-            padding: 0;
-            background: none;
-            border: none;
-        }
-        .FE {
-            top: -60px;
-            left: 12vw;
-        }
-        .INTEREC {
-            top: -60px;
-            left: 33vw;
-        }
-        .COMMU {
-            top: -60px;
-            right: 33vw;
-        }
-        .REC {
-            top: -60px;
-            right: 12vw;
-        }
-    }
-
-    @media only screen and (max-width: ${BREAK_POINT_PHONE}px) {
-        p {
-            font-size: 25px;
-        }
-    }
-`;
+};
 
 export default MainText;

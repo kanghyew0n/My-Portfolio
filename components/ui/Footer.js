@@ -1,24 +1,12 @@
-import styled from "styled-components";
+import { FOOTER } from '../../constant'
 
 const Footer = () => {
-    return <FooterContainer>
-        @kanghyew0n portfolio &nbsp; 👉 &nbsp;
-        <a href="https://github.com/kanghyew0n" target='_blank'>github</a>
-        <span>&nbsp; & &nbsp;</span>
-        <a href="https://kanghyew0n.github.io/" target='_blank'>blog</a>
-    </FooterContainer>;
+    return <div className='h-[100px] mt-[150px] flex justify-center items-center bg-gray-900'>
+        <span>@kanghyew0n 👉</span>
+        {Object.keys(FOOTER).map((key) => (
+            <a href={FOOTER[key]} key={key} target='_blank' className="underline px-[5px]">{key}</a>
+        ))}
+    </div>;
 };
-
-const FooterContainer = styled.div`
-    background-color: #111;
-    height: 100px;
-    margin-top: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    a {
-        text-decoration: underline;
-    }
-`;
 
 export default Footer;
