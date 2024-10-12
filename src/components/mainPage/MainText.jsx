@@ -1,4 +1,4 @@
-import { INFO } from "../../constant";
+import { INFO } from "@/utils/constant";
 
 const MainText = () => {
     return (

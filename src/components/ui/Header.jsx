@@ -1,6 +1,8 @@
+'use client';
+
 import Link from "next/link";
 
-const Header = ({ onItsMeClick }) => {
+const Header = () => {
     return (
         <header className="w-full h-[60px] lg:h-[80px] fixed z-10 bg-gray-800">
             <div className="flex items-center justify-between px-4 lg:px-16">
@@ -12,7 +14,7 @@ const Header = ({ onItsMeClick }) => {
                 </Link>
 
                 <ul className='h-[60px] lg:h-[80px] flex items-center gap-[48px]'>
-                    <li className='text-lg cursor-pointer' onClick={onItsMeClick}>It's Me !</li>
+                    <li className='text-lg cursor-pointer'>It's Me !</li>
                     <Link href="/project">
                         <li className='text-lg cursor-pointer'>Project</li>
                     </Link>
