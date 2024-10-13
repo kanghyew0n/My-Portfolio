@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={montserrat.className}>
         <Header />
-        {children}
+        <div className="px-[5vw] py-[100px]">{children}</div>
         <Footer />
       </body>
     </html>
