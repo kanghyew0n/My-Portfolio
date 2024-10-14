@@ -6,9 +6,9 @@ const AboutItem = (props) => {
       </div>
       <div>
         <p className="text-[24px] font-bold">{props.info.keyWord}</p>
-        <p className="text-[18px] mb-4">{props.info.subTitle}</p>
+        <p className="text-lg mb-4">{props.info.subTitle}</p>
       </div>
-      <p className="text-[16px]">{props.info.content}</p>
+      <p className="text-lg font-light">{props.info.content}</p>
     </div>
   );
 };
