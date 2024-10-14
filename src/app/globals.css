@@ -1,0 +1,49 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes point {
+    50% {
+      opacity: 0.2;
+    }
+  }
+
+  .animate-point {
+    animation: point 1s 3 alternate;
+  }
+}
+
+@layer components {
+  .keyword {
+    @apply flex items-center gap-[8px] absolute text-[clamp(0.7rem,2.5vw,1.1rem)] px-[2vw] py-[1vw] bg-gray-200 bg-opacity-10 border-2 border-dashed border-gray-500 rounded-full transition-all duration-300 cursor-pointer animate-point;
+  }
+}
+
+
+html,
+body {
+  background-color: #151515;
+  color: #dfdfdf;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}

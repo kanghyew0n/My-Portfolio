@@ -1,51 +1,35 @@
-export const INFO = [
-    {
-        icon: "🏋️‍♀️",
-        keyWord: "Responsibility",
-        subTitle: "책임감이 강한 편입니다.",
+export const INFO = {
+    problemSolver: {
+        icon: "🧙‍♀️",
+        keyWord: "Problem Solver",
+        subTitle: "문제를 찾아 공유하고, 해결하는 것을 좋아합니다.",
         content:
-            "프로젝트 진행 당시 팀장을 맡게 되었고 팀장으로서 프로젝트 관리뿐만 아니라 팀원을 챙기는 일도 필요하다고 생각했습니다. 어려움을 많이 느끼는 팀원분을 위해 오프라인에서 만나 페어 프로그래밍 형식으로 작업하였습니다. 그 결과 팀원분도 자신감을 얻고 함께 프로젝트를 잘 마무리 할 수 있었습니다.",
+            "웹 빌더 사용 중 발생하는 버벅거림을 분석한 결과, 리플로우와 리페인트가 강제로 일어나는 것을 발견했습니다. 이를 통해 성능 최적화의 필요성을 느끼고, 프론트 팀에 문제를 공유하여 성능 최적화 스프린트를 진행했습니다. 그 결과 버벅거리는 문제뿐만 아니라 초기 로딩속도도 약 30% 개선되었습니다.",
     },
 
-    {
-        icon: "👀",
-        keyWord: "Interective",
-        subTitle: "흥미로운 인터렉티브에 관심이 많습니다.",
+    processImprover: {
+        icon: "🔄",
+        keyWord: "Process Improver",
+        subTitle: "프로세스를 개선하고, 더 나은 개발 문화를 만듭니다.",
         content:
-            "사용자와 상호작용하고 사용자로 하여금 흥미를 이끌어내는 일에 관심이 많습니다. 지루하지 않고 사용자의 귀찮음을 덜어주는 서비스를 만들어 보고 싶습니다!",
+            "런칭 직전에 코드 리뷰를 잠시 중단한 결과, 무분별한 핫픽스가 잦아지는 문제가 발생했습니다. 이를 해결하기 위해 프론트 팀에 코드 리뷰를 다시 도입하자고 제안하고, 커밋 컨벤션 문서도 업데이트했습니다. 이후 핫픽스 빈도가 크게 줄어들었고, 체계적인 코드 리뷰의 중요성을 다시 깨달았습니다. 이 경험을 통해 팀의 코드 품질과 안정성을 높이는 데 기여할 수 있었습니다.",
     },
 
-    {
-        icon: "✏️",
-        keyWord: "Recording",
-        subTitle: "저만의 언어로 기록하는 것을 좋아합니다 →",
-        link : "https://kanghyew0n.github.io/",
+    effectiveCommunicator: {
+        icon: "💬",
+        keyWord: "Effective Communicator",
+        subTitle: "프론트엔드 개발자에게 커뮤니케이션 능력은 필수라고 생각합니다. ",
         content:
-            "공부를 하며 알게 된 내용이나 프로젝트 회고 뿐만 아니라 어떻게 사용할 것이며 어떤 점이 좋았고 배웠던 감정을 저만의 언어로 기록하는 것을 좋아합니다. 제가 다시 볼 수 있도록 기록하기 때문입니다! 일주일에 하나씩은 깃허브에 업로드 하고 있습니다. ",
+            "다양한 팀원들과 원활하게 소통하기 위해서는 명확한 의사 전달과 함께 존중하는 태도가 필요합니다. 저는 이러한 원칙을 바탕으로 동료들과의 협업에서 긍정적인 피드백을 꾸준히 받아왔습니다.",
     },
-];
+}
 
-export const REASON = [
-    {
-        title: [
-            "저에게 중요한 가치는 성취감과 저 스스로의 발전입니다. ",
-            "이것이 저의 원동력이기도 합니다.",
-        ],
-        content: [
-            "디자인에 관심이 있어 부전공으로 미디어 디자인을 전공하였고 저에게 만족감이라는 가치를 주었습니다. 하지만 ",
-            "코드를 구현하며 느끼는 성취감과 스스로의 발전에 더욱 큰 가치를 느끼게 되었습니다. ",
-            "저에게 원동력이 되는 것은 만족감 보다는 성취감이었고 이것이 제가 계속해서 나아갈 수 있는 이유입니다.",
-        ],
-    },
-    {
-        title: ["재미있는 것을 좋아합니다."],
-        content: [
-            " 사용자의 상호작용에 따라 움직이는 인터렉션을 좋아하는 이유이기도 합니다. 또한 UX를 개선하는 것에 즐거움을 느끼며 더 나아가 DX를 높이기 위해 개발자들이 찾는 오픈소스를 구현해보고 싶기도 합니다.  ",
-            "사용자에게 선한 영향력을 주며 개발자에게 인정받는 즐길 수 있는 개발자가 되고 싶습니다.",
-        ],
-       
-    },
-];
+export const TECH_STACK = {
+    core: ["React", "Next Js", "TypeScript"],
+    libraries: ["Scss", "Emotion", "Recoil", "React-Query", "React-Hook-Form"],
+
+}
+
 
 export const PROJECT = [
     {
@@ -124,6 +108,12 @@ export const PROJECT = [
         ],
     },
 ];
+
+export const FOOTER = {
+    github: "https://github.com/kanghyew0n",
+    blog: "https://velog.io/@kanghyeron/posts",
+    linkedin: 'https://www.linkedin.com/in/%ED%98%9C%EC%9B%90-%EA%B0%95-9650b827a/'
+}
 
 export const BREAK_POINT_DESKTOP = 1024;
 export const BREAK_POINT_TABLET = 768;
