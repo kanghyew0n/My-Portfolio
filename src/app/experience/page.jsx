@@ -1,4 +1,3 @@
-import React from "react";
 import CareerSection from "./_component/CareerSection";
 import EducationSection from "./_component/EducationScetion";
 
