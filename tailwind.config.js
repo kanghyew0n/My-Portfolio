@@ -19,7 +19,11 @@ module.exports = {
         800: '#151515',
         900: '#111111'
       },
-      blue: '#0038ff'
+      blue: {
+        100: '#597dff',
+        200: '#0038ff'
+      },
+      point:'#81ff6f'
     },
     extend: {
       // 사용자 정의 spacing 추가
