@@ -5,10 +5,10 @@ const AboutItem = (props) => {
         {props.info.icon}
       </div>
       <div>
-        <p className="text-[24px] font-bold">{props.info.keyWord}</p>
+        <h2>{props.info.keyWord}</h2>
         <p className="text-lg mb-4">{props.info.subTitle}</p>
       </div>
-      <p className="text-lg font-light">{props.info.content}</p>
+      <p className="text-lg">{props.info.content}</p>
     </div>
   );
 };
