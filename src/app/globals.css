@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  @keyframes point {
-    50% {
-      opacity: 0.2;
-    }
-  }
-
-  .animate-point {
-    animation: point 1s 3 alternate;
-  }
-}
-
 @layer base {
   h1 {
     @apply mb-[48px] text-[28px] font-bold lg:text-[36px];
@@ -35,6 +23,18 @@
 @layer components {
   .keyword {
     @apply animate-point absolute flex cursor-pointer items-center gap-[8px] rounded-full border-2 border-dashed border-gray-500 bg-gray-200 bg-opacity-10 px-[2vw] py-[1vw] text-[clamp(0.7rem,2.5vw,1.1rem)] transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  @keyframes point {
+    50% {
+      opacity: 0.2;
+    }
+  }
+
+  .animate-point {
+    animation: point 1s 3 alternate;
   }
 }
 
