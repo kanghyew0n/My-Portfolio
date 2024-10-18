@@ -17,6 +17,9 @@ export const PROJECT = [
     }],
     techStacks: ['React', 'Next Js', 'Scss', 'Recoil', 'ContextAPI', 'React-Query'],
     images: [{
+      path: '/assets/thumbnail/editor.png',
+      alt: 'editor 썸네일'
+    }, {
       path: '/assets/project/qshop_editor_pc.png',
       alt: '큐샵 에디터 피씨'
     }, {
@@ -41,11 +44,17 @@ export const PROJECT = [
     }],
     techStacks: ['React', 'Next Js', 'Emotion', 'Recoil', 'React-Query', 'React-Hook-Form'],
     images: [{
-      path: '/assets/project/qshop_editor_pc.png',
-      alt: '큐샵 에디터 피씨'
+      path: '/assets/thumbnail/home.png',
+      alt: 'homepage 썸네일'
     }, {
-      path: '/assets/project/qshop_editor_mo.png',
-      alt: '큐샵 에디터 모바일'
+      path: '/assets/project/qshop_home_item.png',
+      alt: '큐샵 홈페이지 zapier'
+    }, {
+      path: '/assets/project/qshop_home_pay.png',
+      alt: '큐샵 홈페이지 featureos'
+    }, {
+      path: '/assets/project/qshop_home_template.png',
+      alt: '큐샵 홈페이지 plan'
     }]
   }, {
     id: 'bead-buddies',
@@ -76,11 +85,14 @@ export const PROJECT = [
     }],
     techStacks: ['React', 'Next Js', 'Scss', 'Recoil', 'ContextAPI', 'React-Query'],
     images: [{
-      path: '/assets/project/qshop_editor_pc.png',
-      alt: '큐샵 에디터 피씨'
+      path: '/assets/thumbnail/bead.png',
+      alt: 'BeadBuddies 썸네일'
     }, {
-      path: '/assets/project/qshop_editor_mo.png',
-      alt: '큐샵 에디터 모바일'
+      path: '/assets/project/bead_figma.png',
+      alt: 'BeadBuddies 피그마'
+    }, {
+      path: '/assets/project/bead.png',
+      alt: 'BeadBuddies'
     }]
   }
 ]

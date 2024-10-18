@@ -1,4 +1,6 @@
 import "./globals.css";
+import "./embla.css";
+
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 
