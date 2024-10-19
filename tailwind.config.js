@@ -16,6 +16,8 @@ module.exports = {
       gray: {
         200: '#eeeeee',
         500: '#666666',
+        600: '#3b3b3b',
+        700: '#212121',
         800: '#151515',
         900: '#111111'
       },
@@ -23,7 +25,7 @@ module.exports = {
         100: '#597dff',
         200: '#0038ff'
       },
-      point:'#81ff6f'
+      point: '#81ff6f'
     },
     extend: {
       // 사용자 정의 spacing 추가

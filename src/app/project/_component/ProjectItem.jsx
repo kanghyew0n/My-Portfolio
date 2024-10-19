@@ -19,11 +19,11 @@ const ProjectSection = () => (
 
 const ProjectItem = ({ project }) => {
   const router = useRouter();
-
+  
   return (
     <div
       key={project.id}
-      className="rounded-[30px] bg-white bg-opacity-5 p-10"
+      className="bg-box"
       onClick={() => router.push(`/project/${project.id}`)}
     >
       <h2 className="mb-[10px] text-nowrap text-[24px] font-bold">
