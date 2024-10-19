@@ -1,13 +1,15 @@
 import "./globals.css";
-import Header from "@/components/ui/Header";
-import Footer from "@/components/ui/Footer";
+import "./embla.css";
+
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 import { Montserrat } from "next/font/google";
 
 // Montserrat 폰트 설정
 const montserrat = Montserrat({
   subsets: ["latin"], // 사용할 폰트 서브셋
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], // 사용할 폰트 두께
+  weight: ["300", "400", "500", "600", "700", "800", "900"], // 사용할 폰트 두께
   style: ["normal", "italic"], // 폰트 스타일
   display: "swap", // 폰트 로딩 중 기본 폰트와 대체되도록 설정
 });
