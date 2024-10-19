@@ -1,10 +1,7 @@
-"use client";
+import ProjectDetailModal from "../_component/ProjectDetailModal"
 
-import { useRouter } from "next/navigation";
-
-export default function ProjectItem() {
-  const router = useRouter();
-
-  
-  return <></>
+const ProjectDetailPage = () => {
+  return <ProjectDetailModal/>
 }
+
+export default ProjectDetailPage
