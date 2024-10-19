@@ -19,12 +19,12 @@ const ProjectSection = () => (
 
 const ProjectItem = ({ project }) => {
   const router = useRouter();
-  
+
   return (
     <div
       key={project.id}
       className="bg-box"
-      onClick={() => router.push(`/project/${project.id}`)}
+      onClick={() => router.push(`/project/${project.id}`, { scroll: false })}
     >
       <h2 className="mb-[10px] text-nowrap text-[24px] font-bold">
         {project.name}
@@ -36,23 +36,11 @@ const ProjectItem = ({ project }) => {
           ) : (
             <span className="mr-2">{info.title}</span>
           )}
-
           {project.info.length - 1 !== idx && <span className="mr-2"> |</span>}
         </React.Fragment>
       ))}
       <h3>Description</h3>
-      <p>{project.description}</p>
-
-      <h3 className="mb-3">Tech Stack</h3>
-      <ul className="mb-10 flex flex-wrap gap-2">
-        {project.techStacks.map((techStack, idx) => (
-          <li key={`techStack-${project.id}-${idx}`}>
-            <span className="block rounded-full border border-gray-200/50 bg-black px-3 py-1">
-              {techStack}
-            </span>
-          </li>
-        ))}
-      </ul>
+      <p className='mb-5'>{project.description}</p>
       <EmblaCarousel slides={project.images} />
     </div>
   );

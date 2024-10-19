@@ -1,18 +1,23 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const ModalLayer = ({ children }) => {
+  const [isAnimating, setIsAnimating] = useState(false);
   const router = useRouter();
 
-  const handleClickBack = () => {
-    router.back();
+  const handleCloseModal = () => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      router.back();
+    }, 200);
   };
 
   return (
     <div
-      className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center bg-black/50"
-      onClick={handleClickBack}
+      className={`modal-layer ${isAnimating ? "show" : ""}`}
+      onClick={handleCloseModal}
     >
       {children}
     </div>
