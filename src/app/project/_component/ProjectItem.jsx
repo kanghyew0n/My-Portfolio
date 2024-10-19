@@ -40,7 +40,7 @@ const ProjectItem = ({ project }) => {
         </React.Fragment>
       ))}
       <h3>Description</h3>
-      <p className='mb-5'>{project.description}</p>
+      <p className="mb-5">{project.description}</p>
       <EmblaCarousel slides={project.images} />
     </div>
   );

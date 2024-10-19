@@ -4,7 +4,7 @@ import { INFO } from "@/utils/constant";
 const About = () => {
   return (
     <section>
-      <div className="flex justify-between items-center">
+      <div className="flex items-center justify-between">
         <h1>About me</h1>
       </div>
       <div className="flex flex-col gap-[48px] lg:flex-row">
