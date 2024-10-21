@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <MainText />
-      <div className="pt-[25vw]">
+      <div className="pt-[20vw]">
         <TechStack />
         <About />
       </div>

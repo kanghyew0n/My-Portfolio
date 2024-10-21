@@ -7,7 +7,7 @@ import { PROJECT } from "@/utils/projectData";
 import EmblaCarousel from "./EmblaCarousel";
 
 const ProjectSection = () => (
-  <div className="pt-[60px] lg:pt-[100px]">
+  <div className="pt-[100px] max-lg:pt-[40px]">
     <h1 className="block w-[300px]">Project</h1>
     <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
       {PROJECT.map((project) => (
@@ -26,9 +26,7 @@ const ProjectItem = ({ project }) => {
       className="bg-box"
       onClick={() => router.push(`/project/${project.id}`, { scroll: false })}
     >
-      <h2 className="mb-[10px] text-nowrap text-[24px] font-bold">
-        {project.name}
-      </h2>
+      <h2 className="mb-[10px] text-[24px] font-bold">{project.name}</h2>
       {project.info.map((info, idx) => (
         <React.Fragment key={`info-${project.id}-${idx}`}>
           {info.link ? (

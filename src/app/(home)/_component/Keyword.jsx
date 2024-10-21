@@ -1,42 +1,33 @@
-import { INFO } from "@/utils/constant";
+import { ABOUT } from "@/utils/constant";
+
+const ITEM = {
+  fe: {
+    icon: "💻",
+    keyWord: "Tech Stack",
+  },
+  ...ABOUT,
+};
 
 const Keyword = () => {
   return (
-    <>
-      <div className="fe keyword" style={getPositionStyles("fe")}>
-        💻 <span>Tech Stack</span>
-      </div>
-      {Object.keys(INFO).map((key) => {
-        const { icon, keyWord } = INFO[key];
-        return (
-          <div
-            className={`${key} keyword`}
-            key={key}
-            style={getPositionStyles(key)}
-          >
-            <span>{icon}</span>
-            <span>{keyWord}</span>
-          </div>
-        );
-      })}
-    </>
+    <div className="h-[60px] flex justify-evenly">
+      {Object.keys(ITEM).map((key) => (
+        <KeywordItem key={key} itemKey={key} />
+      ))}
+    </div>
   );
 };
 
-// 각 키에 따른 위치 스타일 설정
-const getPositionStyles = (key) => {
-  switch (key) {
-    case "fe":
-      return { top: "-80px", left: "19vw" };
-    case "problemSolver":
-      return { top: "20vw", left: "13vw" };
-    case "processImprover":
-      return { top: "19vw", right: "21vw" };
-    case "effectiveCommunicator":
-      return { top: "-60px", right: "15vw" };
-    default:
-      return {};
-  }
+const KeywordItem = ({ itemKey }) => {
+  const { icon, keyWord } = ITEM[itemKey];
+  return (
+    <div className={`${itemKey} keyword`} key={itemKey}>
+      <div className="flex items-center gap-[8px]">
+        <span>{icon}</span>
+        <span className="max-md:hidden">{keyWord}</span>
+      </div>
+    </div>
+  );
 };
 
 export default Keyword;

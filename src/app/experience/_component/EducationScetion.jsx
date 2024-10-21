@@ -3,7 +3,7 @@ import Link from "next/link";
 import { EDUCATION } from "@/utils/experienceData";
 
 const EducationSection = () => (
-  <div className="flex pt-[60px] lg:pt-[100px]">
+  <div className="flex pt-[100px] max-lg:pt-[40px] max-lg:flex-col">
     <h1 className="block w-[300px]">Education</h1>
     <div className="flex-1">
       {EDUCATION.map((education) => (
