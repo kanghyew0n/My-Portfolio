@@ -1,4 +1,4 @@
-export const INFO = {
+export const ABOUT = {
     problemSolver: {
         icon: "🧙‍♀️",
         keyWord: "Problem Solver",
@@ -29,85 +29,6 @@ export const TECH_STACK = {
     libraries: ["Scss", "Emotion", "Recoil", "React-Query", "React-Hook-Form"],
 
 }
-
-
-export const PROJECT = [
-    {
-        projectImage: "/assets/projectImages/hoverImage1.png",
-        hoverProjectImage: "/assets/projectImages/mainImage1.png",
-        projectName: "Seoul in petkage : 서울인펫키지",
-        description: "서울시 반려동반 장소 공유 서비스",
-        team: "Team",
-        date: "2022/09/15 ~ 현재",
-        detailDescription:
-            "코드스테이츠를 수료하며 진행했던 프로젝트입니다. 서울인펫키지는 반려견을 키우고 있는 팀원들의 의견을 반영하여 제작을 시작하게 되었고, 사용자들의 장소 등록을 기반으로 운영되는 서비스로 기획했습니다.",
-        githubLink: "https://github.com/kanghyew0n/Team-Safari-Project",
-        feStack: [
-            "JavaScript,",
-            "Vite,",
-            "StyledComponent,",
-            "React,",
-            "SWR,",
-            "Cloudinary,",
-            "zustand",
-        ],
-        beStack: [
-            "Java,",
-            "spring,",
-            "boot,",
-            "spring,",
-            "data,",
-            "jpa,",
-            "springsecurity",
-        ],
-    },
-
-    {
-        projectImage: "/assets/projectImages/hoverImage2.png",
-        hoverProjectImage: "/assets/projectImages/mainImage2.png",
-        projectName: "Toy Community",
-        description: "커뮤니티 사이트",
-        team: "Personal",
-        date: "2022/10/19 ~ 2022/10/31  *사이트 방문 시 서버 로딩시간이 필요합니다!",
-        detailDescription:
-            "개인으로 백엔드와 프론트엔드 모두 맡아서 진행한 프로젝트입니다. 백엔드 부분은 강의를 보고 진행하였습니다. 로그인은 파이어베이스를 활용하였고 이미지는 네이버 클라우드를 활용하였습니다. 최근 TypeScript로 마이그레이션을 진행했습니다.",
-        githubLink: "https://github.com/kanghyew0n/Toy-Community",
-        serviceURL: "https://toy-community.fly.dev/",
-        feStack: [
-            "JavaScript,",
-            "TypeScript",
-            "React,",
-            "Emotion,",
-            "Redux-Toolkit"
-        ],
-        beStack: [
-            "node.js,",
-            "express,",
-            "mongo DB,",
-            "Mongoose,",
-            "firebase"
-        ],
-    },
-
-    {
-        projectImage: "/assets/projectImages/hoverImage3.png",
-        hoverProjectImage: "/assets/projectImages/mainImage3.png",
-        projectName: "Kanghyew0n Portfolio",
-        description: "포트폴리오 사이트",
-        team: "Personal",
-        date: "2022/11/18 ~ 2022/11/26",
-        detailDescription:
-            "현재 보고계신 포트폴리오 사이트입니다. 백엔드 없이 개인 프로젝트로 진행되었고 Next.js를 활용하여 파일 기반 라우터 처리를 하였고 작은 요소들에 애니메이션 효과를 주었습니다. 프로젝트 페이지 데이터같은 경우 파일을 따로 분리하여 불러오는 형식으로 진행되었습니다.",
-        githubLink: "https://github.com/kanghyew0n/My-Portfolio",
-        serviceURL: "https://kanghyew0n.vercel.app/",
-        feStack: [
-            "JavaScript,",
-            "Next.js,",
-            "React,",
-            "StyledComponent",
-        ],
-    },
-];
 
 export const FOOTER = {
     github: "https://github.com/kanghyew0n",
