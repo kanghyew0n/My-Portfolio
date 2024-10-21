@@ -4,16 +4,16 @@
 
 @layer base {
   h1 {
-    @apply mb-[48px] text-[28px] font-bold lg:text-[36px];
+    @apply mb-[48px] text-[36px] font-bold max-lg:text-[28px] max-sm:mb-[24px] max-sm:text-[24px];
   }
   h2 {
-    @apply text-[24px] font-bold;
+    @apply text-wrap text-[24px] font-bold max-md:text-[20px];
   }
   h3 {
     @apply mb-[5px] mt-[10px] text-[18px] font-bold;
   }
   p {
-    @apply font-light;
+    @apply text-lg font-light max-md:text-[16px];
   }
   span {
     @apply text-nowrap font-light;
@@ -22,14 +22,26 @@
 
 @layer components {
   .keyword {
-    @apply animate-point absolute flex cursor-pointer items-center gap-[8px] rounded-full border-2 border-dashed border-gray-500 bg-gray-200 bg-opacity-10 px-[2vw] py-[1vw] text-[clamp(0.7rem,2.5vw,1.1rem)] transition-all duration-300;
+    @apply animate-point inline-block h-fit cursor-pointer rounded-full border-2 border-dashed border-gray-500 bg-gray-200/10 px-[2vw] py-[1vw] text-[18px] transition-all duration-300;
+  }
+  .fe {
+    @apply translate-x-[12vw] translate-y-[0] max-md:translate-x-0 max-md:translate-y-0;
+  }
+  .problemSolver {
+    @apply translate-x-[-12vw] translate-y-[24vw] max-lg:translate-y-[30vw] max-md:translate-x-0 max-md:translate-y-0;
+  }
+  .processImprover {
+    @apply translate-x-[10vw] translate-y-[0] max-md:translate-x-0 max-md:translate-y-0;
+  }
+  .effectiveCommunicator {
+    @apply translate-x-[-5vw] translate-y-[24vw] max-lg:translate-x-[-17vw] max-lg:translate-y-[30vw] max-md:translate-x-0 max-md:translate-y-0;
   }
 
   .bg-box {
-    @apply bg-gray-700 rounded-[30px] p-10 text-gray-200;
+    @apply rounded-[30px] bg-gray-700 p-10 text-gray-200 max-md:rounded-[15px] max-md:p-6;
   }
   .modal-bg-box {
-    @apply border-gray-600 rounded-[30px] border bg-gray-800 p-10 text-gray-200;
+    @apply overflow-scroll rounded-[30px] border border-gray-600 bg-gray-800 p-10 text-gray-200 max-lg:min-w-[700px] max-md:h-[100vh] max-md:min-w-[100vw] max-md:rounded-none max-md:border-none max-md:px-10 max-md:py-20;
   }
   .modal-layer {
     @apply animate-fade-in fixed bottom-0 left-0 top-0 z-10 flex h-full w-full items-center justify-center bg-black/90 backdrop-blur;

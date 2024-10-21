@@ -10,7 +10,7 @@ const ProjectDetailModal = ({ params }) => {
       <dialog
         open
         id="dialog-1"
-        className="modal-bg-box left-[50%] translate-x-[-50%] translate-y-0"
+        className="modal-bg-box left-[50%] translate-x-[-50%] translate-y-0 "
       >
         <h1>{project.name}</h1>
         <h3>What did I do</h3>
@@ -25,7 +25,7 @@ const ProjectDetailModal = ({ params }) => {
           ))}
         </ul>
 
-        <h3 className="mb-3 mt-3">Tech Stack</h3>
+        <h3 className="mb-3 mt-5">Tech Stack</h3>
         <ul className="mb-10 flex flex-wrap gap-2">
           {project.techStacks.map((techStack, idx) => (
             <li key={`techStack-${project.id}-${idx}`}>

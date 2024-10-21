@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CAREER } from "@/utils/experienceData";
 
 const CareerSection = () => (
-  <div className="flex pt-[60px] lg:pt-[100px]">
+  <div className="flex pt-[100px] max-lg:flex-col max-lg:pt-[40px]">
     <h1 className="block w-[300px]">Career</h1>
     <div className="flex-1">
       {CAREER.map((career) => (
@@ -14,7 +14,7 @@ const CareerSection = () => (
 );
 
 const CareerItem = ({ career }) => (
-  <div className="mb-20">
+  <div className="mb-20 max-sm:mb-0">
     <h2 className="mb-[10px] text-nowrap">{career.company}</h2>
     <div className="mb-5">
       {career.info.map((info, idx) => (

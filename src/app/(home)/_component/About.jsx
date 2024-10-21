@@ -1,5 +1,5 @@
 import AboutItem from "@/app/(home)/_component/AboutItem";
-import { INFO } from "@/utils/constant";
+import { ABOUT } from "@/utils/constant";
 
 const About = () => {
   return (
@@ -7,9 +7,9 @@ const About = () => {
       <div className="flex items-center justify-between">
         <h1>About me</h1>
       </div>
-      <div className="flex flex-col gap-[48px] lg:flex-row">
-        {Object.keys(INFO).map((key) => (
-          <AboutItem info={INFO[key]} key={key} />
+      <div className="flex flex-row gap-[48px] max-lg:flex-col max-sm:gap-[24px]">
+        {Object.keys(ABOUT).map((key) => (
+          <AboutItem info={ABOUT[key]} key={key} />
         ))}
       </div>
     </section>
