@@ -3,12 +3,7 @@ export const PROJECT = [
   {
     id: 'qshop-editor',
     name: '큐샵 에디터 ',
-    info: [{
-      title: '(주) 스퀘어스',
-    },
-    {
-      title: 'FE 3-4명, BE 1-2명',
-    }],
+    info: '(주) 스퀘어스  |  FE 3-4명, BE 1-2명',
     description: '드래그 드롭으로 웹사이트를 제작할 수 있도록 도와주는 노코드 웹빌더 서비스로 큐샵의 핵심 기능 중 하나입니다.',
     result: ['웹 빌더 핵심 기능인 그리드 기반의 드래그/드롭 및 json 데이터 구조 기반의 콘텐츠 커스터마이징 등 개발 및 유지보수',
       '폰트 수가 늘어나면서 초기 로딩 속도가 증가하는 문제가 발생, 기존 CSS 파일에서 폰트를 import하는 방식을 동적으로 폰트를 사용한 부분에서만 로딩하도록 변경하여 초기 로딩 속도 90% 개선',
@@ -41,12 +36,7 @@ export const PROJECT = [
   {
     id: 'qshop-homepage',
     name: '큐샵 홈페이지',
-    info: [{
-      title: '(주) 스퀘어스',
-    },
-    {
-      title: 'FE 2명, BE 1-2명',
-    }],
+    info: '(주) 스퀘어스  |  FE 2명, BE 1-2명',
     description: '큐샵 자체 홈페이지로 가입, 구독결제, 사이트 템플릿 등을 제공합니다.',
     result: ['홈페이지 전반적인 기능 구현 및 반응형 디자인 개발 (네이버 로그인, 구독결제 등 전반적으로 참여)',
       '타이포그라피, 컬러 팔레트 및 컴포넌트 사이즈 등을 설정하여 일관된 디자인 시스템 구축',
@@ -72,25 +62,20 @@ export const PROJECT = [
     }]
   }, {
     id: 'bead-buddies',
-    name: 'Bead Buddies (비즈발 도안 제작소)',
-    info: [{
-      title: '2024.09 - 진행중',
-    },
-    {
-      title: '개인 프로젝트',
-    },
-    {
+    name: 'Bead Buddies',
+    links: [{
       title: '🔗 Github',
       link: 'https://github.com/kanghyew0n/bead-buddies'
     },
     {
       title: '🔴 BeadBuddies 사이트',
-      link: 'https://github.com/kanghyew0n/bead-buddies'
+      link: 'https://bead-buddies.vercel.app/'
     },
     {
       title: '🎨 storybook',
-      link: 'https://github.com/kanghyew0n/bead-buddies'
+      link: 'https://www.chromatic.com/build?appId=66e968052d38c6b421d6dd25'
     }],
+    info: '2024.09 - 진행중  |  개인 프로젝트',
     description: `비즈발의 도안을 제작할 수 있는 서비스입니다. \n 비즈공예가 평소 취미였던 저는 비즈발 이라는 것을 접하게 되었고 만들고싶다는 생각을 했습니다. 하지만 비즈발 도안 제작을 엑셀 시트나 수작업으로 해야 한다는 사실을 알게 되었고 간단하게 도안을 제작할 수 있는 서비스를 만들게 되었습니다.`,
     result: ['디자인 시스템 정의, 스토리북을 도입하여 컴포넌트 관리 및 chromatic으로 스토리북 배포 및 git workflow에 자동배포 설정',
       'html2canvas 라이브러리의 node 캡쳐 기능을 사용하여 도안을 png로 저장 가능',
