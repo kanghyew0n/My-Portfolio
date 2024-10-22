@@ -10,7 +10,7 @@ const ProjectDetailModal = ({ params }) => {
       <dialog
         open
         id="dialog-1"
-        className="modal-bg-box left-[50%] translate-x-[-50%] translate-y-0 "
+        className="modal-bg-box left-[50%] translate-x-[-50%] translate-y-0"
       >
         <h1>{project.name}</h1>
         <h3>What did I do</h3>
@@ -18,7 +18,7 @@ const ProjectDetailModal = ({ params }) => {
           {project.result.map((result, idx) => (
             <li
               key={`${project.id}-${idx}`}
-              className="mb-2 ml-5 list-disc text-lg font-light"
+              className="mb-2 ml-5 list-disc text-lg font-light max-sm:text-[16px]"
             >
               {result}
             </li>
@@ -29,7 +29,7 @@ const ProjectDetailModal = ({ params }) => {
         <ul className="mb-10 flex flex-wrap gap-2">
           {project.techStacks.map((techStack, idx) => (
             <li key={`techStack-${project.id}-${idx}`}>
-              <span className="block rounded-full border border-gray-200/50 bg-black px-3 py-1">
+              <span className="block rounded-full border border-gray-200/50 bg-black px-3 py-1 max-sm:text-[16px]">
                 {techStack}
               </span>
             </li>
