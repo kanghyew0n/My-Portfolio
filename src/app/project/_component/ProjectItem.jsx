@@ -2,9 +2,9 @@
 
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { PROJECT } from "@/utils/projectData";
 import EmblaCarousel from "./EmblaCarousel";
+import MoveButton from "./MoveButton";
 
 const ProjectSection = () => (
   <div className="pt-[100px] max-lg:pt-[40px]">
@@ -18,27 +18,36 @@ const ProjectSection = () => (
 );
 
 const ProjectItem = ({ project }) => {
-  const router = useRouter();
-
   return (
-    <div
-      key={project.id}
-      className="bg-box"
-      onClick={() => router.push(`/project/${project.id}`, { scroll: false })}
-    >
-      <h2 className="mb-[10px] text-[24px] font-bold">{project.name}</h2>
-      {project.info.map((info, idx) => (
-        <React.Fragment key={`info-${project.id}-${idx}`}>
-          {info.link ? (
-            <Link href={info.link}>{info.title}</Link>
-          ) : (
-            <span className="mr-2">{info.title}</span>
-          )}
-          {project.info.length - 1 !== idx && <span className="mr-2"> |</span>}
-        </React.Fragment>
-      ))}
-      <h3>Description</h3>
-      <p className="mb-5">{project.description}</p>
+    <div key={project.id} className="bg-box flex flex-col">
+      <div className="flex-1">
+        <div className="flex items-center justify-between gap-10">
+          <h2 className="mb-[10px] text-[24px] font-bold">{project.name}</h2>{" "}
+          <MoveButton path={`/project/${project.id}`} />
+        </div>
+        <span className="mr-2">{project.info}</span>
+        {project.links && (
+          <div className="mb-5">
+            <h3>Link</h3>
+            {project.links.map((linkItem, idx) => (
+              <>
+                <Link
+                  href={linkItem.link}
+                  target="_blank"
+                  key={`link-${project.id}-${idx}`}
+                >
+                  {linkItem.title}
+                </Link>
+                {project.links.length - 1 !== idx && (
+                  <span className="mr-2"> |</span>
+                )}
+              </>
+            ))}
+          </div>
+        )}
+        <h3>Description</h3>
+        <p className="mb-5">{project.description}</p>
+      </div>
       <EmblaCarousel slides={project.images} />
     </div>
   );
