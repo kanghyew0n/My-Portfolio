@@ -1,11 +1,10 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import UseCloseModalWithDelay from "@/hooks/useCloseModal";
 
-const ModalLayer = ({ children }) => {
-  const [isAnimating, setIsAnimating] = useState(false);
-  const router = useRouter();
+const ModalLayer = ({ isAnimatingProp = false, children }) => {
+  const { isAnimating, handleCloseModal } = UseCloseModalWithDelay();
 
   useEffect(() => {
     // 모달 열였을때 body scroll 막기
@@ -15,16 +14,9 @@ const ModalLayer = ({ children }) => {
     };
   }, []);
 
-  const handleCloseModal = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      router.back();
-    }, 200);
-  };
-
   return (
     <div
-      className={`modal-layer ${isAnimating ? "show" : ""}`}
+      className={`modal-layer ${isAnimating || isAnimatingProp ? "show" : ""}`}
       onClick={handleCloseModal}
     >
       {children}
