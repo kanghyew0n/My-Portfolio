@@ -1,17 +1,27 @@
-import ModalLayer from "@/components/ModalLayer";
+"use client";
+
 import { PROJECT } from "@/utils/projectData";
+import ModalLayer from "@/components/ModalLayer";
+import CloseIcon from "/public/assets/common/close.svg";
+import UseCloseModalWithDelay from "@/hooks/useCloseModal";
 
 const ProjectDetailModal = ({ params }) => {
+  const { isAnimating, handleCloseModal } = UseCloseModalWithDelay();
+
   const { id } = params;
   const project = PROJECT.find((project) => project.id === id);
 
   return (
-    <ModalLayer>
+    <ModalLayer isAnimatingProp={isAnimating}>
       <dialog
         open
         id="dialog-1"
         className="modal-bg-box left-[50%] translate-x-[-50%] translate-y-0"
+        onClick={(e) => e.stopPropagation()}
       >
+        <div className="absolute right-[35px] top-[35px] cursor-pointer" onClick={handleCloseModal}>
+          <CloseIcon />
+        </div>
         <h1>{project.name}</h1>
         <h3>What did I do</h3>
         <ul className="">
