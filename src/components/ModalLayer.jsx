@@ -1,11 +1,19 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ModalLayer = ({ children }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    // 모달 열였을때 body scroll 막기
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
 
   const handleCloseModal = () => {
     setIsAnimating(true);
