@@ -5,6 +5,14 @@ const mobileDesignLink = 'https://drive.google.com/file/d/1jyAucYf00cczoWrV8MLpc
 
 export const CAREER = [
   {
+    id: '202410',
+    company: "(주) 비바리퍼블리카 | Toss UX Engineer Assistant",
+    info: [{
+      title: "2024년 10월 ~ 진행중"
+    }],
+    contents: <></>
+  },
+  {
     id: '202301-202405',
     company: "(주)스퀘어스 | 큐샵 Qshop",
     info: [{

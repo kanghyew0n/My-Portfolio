@@ -35,7 +35,3 @@ export const FOOTER = {
     blog: "https://velog.io/@kanghyeron/posts",
     linkedin: 'https://www.linkedin.com/in/%ED%98%9C%EC%9B%90-%EA%B0%95-9650b827a/'
 }
-
-export const BREAK_POINT_DESKTOP = 1024;
-export const BREAK_POINT_TABLET = 768;
-export const BREAK_POINT_PHONE = 500;

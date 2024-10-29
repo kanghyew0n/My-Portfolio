@@ -1,4 +1,4 @@
-import { ABOUT } from "@/utils/constant";
+import { ABOUT } from "@/utils/homeData";
 
 const ITEM = {
   fe: {

@@ -1,5 +1,5 @@
 import AboutItem from "@/app/(home)/_component/AboutItem";
-import { ABOUT } from "@/utils/constant";
+import { ABOUT } from "@/utils/homeData";
 
 const About = () => {
   return (
