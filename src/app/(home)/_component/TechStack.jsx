@@ -1,4 +1,4 @@
-import { TECH_STACK } from "@/utils/constant";
+import { TECH_STACK } from "@/utils/homeData";
 
 const TechStack = () => {
   return (

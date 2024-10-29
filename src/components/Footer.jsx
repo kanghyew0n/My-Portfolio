@@ -1,4 +1,4 @@
-import { FOOTER } from '@/utils/constant'
+import { FOOTER } from '@/utils/homeData'
 
 const Footer = () => {
     return <div className='h-[100px] mt-[150px] flex justify-center items-center bg-gray-900 max-sm:mt-[0px]'>
