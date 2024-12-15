@@ -1,0 +1,39 @@
+name: Automated Versioning and Releases
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.17.0'
+
+      - name: Increment version and create tag
+        run: |
+          VERSION=$(cat version.txt)
+          NEW_VERSION=$(node -p "require('semver').inc('$VERSION', 'patch')")
+          echo $NEW_VERSION > version.txt
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "chore(release): bump version to $NEW_VERSION"
+          git tag -a "v$NEW_VERSION-$(date +'%Y')" -m "Release $NEW_VERSION"
+          git push origin main --tags
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        with:
+          tag_name: "v${{ env.NEW_VERSION }}-$(date +'%Y')"
+          release_name: "Release ${{ env.NEW_VERSION }}"
+          body: "This release includes updates for version ${{ env.NEW_VERSION }}."
+          draft: false
+          prerelease: false
