@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '20.17.0'
 
+      - name: Install dependencies
+        run: npm install semver
+
       - name: Increment version and create tag
         run: |
           VERSION=$(cat version.txt)
